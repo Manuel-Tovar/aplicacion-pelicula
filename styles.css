@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.918);
+}
+
+header h1,header form{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-style: oblique;
+    color: aliceblue;
+}
+
+#btn{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    z-index: 9999;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.466);
+    -webkit-box-shadow: 0px 9px 16px -6px rgba(57,91,100,1);
+    -moz-box-shadow: 0px 9px 16px -6px rgba(57,91,100,1);
+    box-shadow: 0px 9px 16px -6px rgba(57,91,100,1);
+}
+
+#btn button{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: aquamarine;
+}
+
+#buscar{
+    height: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+}
+
+.submit {
+    padding: 10px;
+    border-radius: 15px;
+    background-color: aquamarine;
+
+}
+#contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 230px);
+    gap: 40px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.peliculas {
+  list-style: none;
+  font-size: 1.2rem;
+  text-align: center;
+  color: aliceblue;
+}
+
+.peliculas:hover {
+  opacity: 0.8;
+}
+
+.img-pelicula {
+    width: 230px;
+    height: 345px;
+    border-radius: 10px;
+    background-color: azure;
+}
+
+@media (max-width: 560px) {
+    #contenedor {
+        grid-template-columns: 100%;
+    }
+
+    .img-peliculas {
+      width: 90%;
+      height: auto;
+    }
+}
