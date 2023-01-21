@@ -4,7 +4,7 @@ const btnAnterior = document.getElementById("anterior");
 const urlBase = "https://api.themoviedb.org/3/";
 const apiKey = "api_key=c9b993483c9002e040faf6c3550d97fd";
 const urlImg = "https://image.tmdb.org/t/p/original/";
-let contador = 1
+let contador = 1;
 
 btnSiguiente.addEventListener("click", ()=>{
     if(contador < 1000){
@@ -26,7 +26,6 @@ formulario.addEventListener("submit", buscarPelicula);
 function buscarPelicula(e){
     e.preventDefault();
     const buscar = document.getElementById("buscar").value;
-
    consultarApi(buscar);
 }
 
@@ -38,17 +37,18 @@ async function consultarApi(buscar){
         const resultado = await respuesta.json();
 
         let peliculas = "";
-
         resultado.results.forEach(async (pelicula)=>{
             peliculas += `
             <ul>
                 <li class="peliculas">
-                    <img class="img-pelicula" src="${urlImg}${pelicula.poster_path}">
+                    <a id="${pelicula.id}" href="./info.html">
+                        <img class="img-pelicula" src="${urlImg}${pelicula.poster_path}">
+                    </a>
                     <h3>${pelicula.title}</h3>
+                    <p>${pelicula.vote_average}${" "}⭐</p>
                 </li>
             </ul>
             `
-            obtenerId(pelicula.id)
         })
         document.getElementById("contenedor").innerHTML = peliculas
 
@@ -56,7 +56,6 @@ async function consultarApi(buscar){
         console.log(error)
     }
 }
-
 
 const cargarpelicula = async() => {
     try {
@@ -69,8 +68,9 @@ const cargarpelicula = async() => {
                 
                 <ul>
                     <li class="peliculas">
-                            <img class="img-pelicula" src="${urlImg}${pelicula.poster_path}">
+                        <img class="img-pelicula" src="${urlImg}${pelicula.poster_path}">
                         <h3>${pelicula.title}</h3>
+                        <p>${pelicula.vote_average}${" "}⭐</p>
                     </li>
                 </ul>
             `
@@ -85,3 +85,7 @@ const cargarpelicula = async() => {
 }
 
 cargarpelicula();
+
+
+
+
