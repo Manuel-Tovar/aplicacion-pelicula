@@ -41,9 +41,7 @@ async function consultarApi(buscar){
             peliculas += `
             <ul>
                 <li class="peliculas">
-                    <a id="${pelicula.id}" href="./info.html">
-                        <img class="img-pelicula" src="${urlImg}${pelicula.poster_path}">
-                    </a>
+                    <img class="img-pelicula" src="${urlImg}${pelicula.poster_path}">
                     <h3>${pelicula.title}</h3>
                     <p>${pelicula.vote_average}${" "}⭐</p>
                 </li>
