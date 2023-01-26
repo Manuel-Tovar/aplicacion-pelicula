@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -15,6 +16,47 @@ header h1,header form{
     font-style: oblique;
     color: aliceblue;
 }
+
+.fondo{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    height: 120%;
+    z-index: -1;
+    filter: brightness(30%);
+    padding: auto;
+}
+
+
+#detalles{
+    display: flex;
+    margin: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+#info{
+    margin: 50px;
+}
+
+#info h2,h3,h4{
+    margin-bottom: 20px;
+    color: aliceblue;
+}
+
+#info p{
+    margin-bottom: 20px;
+    color: aquamarine;
+}
+
+#video{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
 
 #btn{
     display: flex;
@@ -81,5 +123,18 @@ header h1,header form{
     .img-peliculas {
       width: 90%;
       height: auto;
+    }
+
+    #detalles{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .fondo{
+        width: 100%;
+        height: 100%;
+        
     }
 }
