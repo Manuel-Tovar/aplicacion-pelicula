@@ -60,6 +60,12 @@ async function consultarApi(buscar){
             `
         })
         contenedorPelicula.innerHTML = peliculas
+        
+        if (peliculas == ""){
+            detalles.innerHTML = `
+            <h1 class="sinResult">Sin Resultado</h1>
+            `
+        }
 
     } catch (error) {
         console.log(error)

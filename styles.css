@@ -17,6 +17,11 @@ header h1,header form{
     color: aliceblue;
 }
 
+.sinResult{
+    text-align: center;
+    color: aliceblue;
+}
+
 .fondo{
     display: flex;
     position: absolute;
