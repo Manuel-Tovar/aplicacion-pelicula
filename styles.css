@@ -60,6 +60,8 @@ body{
 #info h2,h3,h4{
     margin-bottom: 20px;
     color: var(--colorFuente);
+    letter-spacing: 1px;
+    word-spacing: 1px;
 }
 
 #info p{
