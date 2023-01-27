@@ -107,6 +107,7 @@ const cargarpelicula = async() => {
 
 titulo.addEventListener("click", ()=>{
     detalles.innerHTML = "";
+    video.innerHTML = "";
     cargarpelicula();
 });
 
