@@ -1,0 +1,19 @@
+body{
+    background-color: rgba(0, 0, 0, 0.918);
+}
+
+svg,h1{
+    display: flex;
+    margin: auto;
+    width: 80%;
+    margin-top: 100px;
+    color: aquamarine;
+}
+
+h2, a {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    color: aliceblue;
+}
