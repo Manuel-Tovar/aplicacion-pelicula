@@ -143,9 +143,8 @@ async function videos(id){
         .then(resultado => resultado);
 
         video.innerHTML = `
-        <iframe width="660" height="415" src="https://www.youtube.com/embed/${api.results[0].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="660" height="415" src="https://www.youtube.com/embed/${api.results[parseInt(api.results.length - 1)].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         `
-
     } catch (error) {
         video.innerHTML = ""
     }
